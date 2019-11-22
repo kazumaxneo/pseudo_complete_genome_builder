@@ -53,6 +53,25 @@ perl pseudo_complete_genome_builder_v0.6.pl -f reference.fasta -s scaffolds.fast
 perl pseudo_complete_genome_builder_v0.6.pl -f reference.fasta -s assembly.fasta -max 1.1 -min 0.9 -n 1 -p 3000 -l 3000 -t 150 -a unicycler
 ```
 
+```
+	Usage:
+	perl pseudo_complete_genome_builder.pl -f reference.fasta -s scaffolds.fasta -max 50 -min 40 -n 1 -p 3000 -l 3000 -t 150 -a spades
+
+	perl pseudo_complete_genome_builder.pl -f reference.fasta -s assembly.fasta -max 1.1 -min 0.9 -n 1 -p 3000 -l 3000 -t 150 -a unicycler
+
+	Input/output options:
+
+	 -f	reference fasta (Required)
+	 -s	contigs/scaffolds (Required)
+	 -max	coverage max (Required)
+	 -min	coverage minimum (Required)
+	 -l	minimum contig length (bp) (default: 3000)
+	 -g	minimum alignment paf (bp) (default: 3000)
+	 -n	reference chromosome number (max 2) (default: 1)
+	 -t	trimmng size from both ends of assembly (default: 150)
+	 -a <spades|unicycler>	assembler (default: spades)
+```
+
 ## Test run
 ```
 
