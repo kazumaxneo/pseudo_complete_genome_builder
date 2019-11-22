@@ -1,25 +1,23 @@
 ######################################################################################## 
-SV-Quest 1.0
+pseudo_complete_genome_builder 0.6
 
-A Perl scripts to call indel position from mapped.bam.   
+A Perl scripts to create pseudo complete genome from fragmented sequences(contigs).   
 
-SV Quest: Sensitive Structure Variation detection tool
+pseudo_complete_genome_builder: 
 
-Kazuma Uesaka, Hiroshi Kouno, Kazuki Terauchi, Yuichi Fujita, Tatsuo Omata, and Kunio Ihara  
+Kazuma Uesaka, and Kunio Ihara  
 
 
 
 Input: 
-  bam file and reference.fasta for the mapping   
+  Complete reference genome(fasta) and contig or scaffolds(fasta)
 Outnput:	
-  indel and deletion position printed to STDOUT  
+  complete genome sequeces that are ordered and oriented by the reference genome sequences
 
 Usage:  
-  perl SV-Quest.pl    
+  perl pseudo_complete_genome_builder_v0.6.pl
 
 
- The mapped.bam and it's reference.fasta should be included in the same folder,  
- and copy the Indel_Hunter.pl in this folder.
 ########################################################################################
 
     
@@ -29,45 +27,36 @@ Usage:
 - circos (v0.67. only required if drawing indel map))  
 
 
-Install [HomeBrew](http://brew.sh/) (Mac OS X) or [LinuxBrew](http://brew.sh/linuxbrew/) (Linux).  
+Install Anaconda3 or Miniconda3. Then,  
 ```
-brew tap brewsci/science
-brew install bwa
-brew install samtools
-brew install circos
+conda env create -f=env.yml
+conda activate pseudo_complete_genome_builder_v0.6
 ```
     
-
 
 ## Source
 ```
 cd $HOME 
-git clone git@github.com:kazumaxneo/SV-Quest.git
-cd SV-Quest/
-echo export PATH=\$PATH:`pwd`\ >> ~/.bash_profile && source ~/.bash_profile
-SV-Quest.pl
+git clone git@github.com:kazumaxneo/pseudo_complete_genome_builder.git
+cd pseudo_complete_genome_builder/
+perl pseudo_complete_genome_builder_v0.6.pl
 ```
     
 
 
-## Calling SVs
-1、call from fastq
+## create pseundo complete genome. If you uses spades assembler for de novo assembly, type
 ```
-./SV-Quest.pl -f refererence.fa -1 forward.fastq -2 reverse.fastq
+perl pseudo_complete_genome_builder_v0.6.pl -f reference.fasta -s scaffolds.fasta -max 50 -min 40 -n 1 -p 3000 -l 3000 -t 150 -a spades
 ```
 
-2、call from bam
+##If you uses unicycler assembler for de novo assembly, type
 ```
-./SV-Quest.pl -f reference.fa -i error_permitted_aligned.bam
+perl pseudo_complete_genome_builder_v0.6.pl -f reference.fasta -s assembly.fasta -max 1.1 -min 0.9 -n 1 -p 3000 -l 3000 -t 150 -a unicycler
 ```
-    
+
 ## Test run
 ```
-chmod u+x SV-Quest.pl
-mkdir test
-tar zxvf sample.tar.gz -C test/
-cd test/
-../SV-Quest.pl -f chromosome.fasta -1 forward.fq -2 reverse.fq
+
 ```  
     
 
