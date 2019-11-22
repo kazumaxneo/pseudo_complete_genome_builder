@@ -71,7 +71,7 @@ Input/output options:
 
 ```  
 
-First, pseudo complete genome was created, then thier pairwise alignment with was performed with minimap2. Finall, their sequence difference, including SNVs, small indels, and large indels, was called using paftools.
+First, pseudo complete genome was created, then thier pairwise seuqencealignment was performed with minimap2. Finally, their sequence difference, including SNVs, small indels, and large indels, was called with paftools.
 
 
 
