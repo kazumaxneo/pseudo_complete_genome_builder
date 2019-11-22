@@ -58,7 +58,8 @@ perl pseudo_complete_genome_builder_v0.6.pl -f reference.fasta -s assembly.fasta
 ```
 
 ```  
-    
+
+First, pseudo complete genome was created, then thier pairwise alignment with was performed with minimap2. Finall, their sequence difference, including SNVs, small indels, and large indels, was called using paftools.
 
 
 ## Licence ##
