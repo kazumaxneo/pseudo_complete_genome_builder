@@ -36,7 +36,6 @@ conda activate pseudo_complete_genome_builder_v0.6
 
 ## Source
 ```
-cd $HOME 
 git clone git@github.com:kazumaxneo/pseudo_complete_genome_builder.git
 cd pseudo_complete_genome_builder/
 perl pseudo_complete_genome_builder_v0.6.pl
@@ -60,6 +59,7 @@ perl pseudo_complete_genome_builder_v0.6.pl -f reference.fasta -s assembly.fasta
 ```  
 
 First, pseudo complete genome was created, then thier pairwise alignment with was performed with minimap2. Finall, their sequence difference, including SNVs, small indels, and large indels, was called using paftools.
+
 
 
 ## Licence ##
