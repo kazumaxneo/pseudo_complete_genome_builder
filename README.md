@@ -22,10 +22,10 @@ Usage:
 
     
 ## Requirements  
-- SAMTools  (version >= 1.3.1)   
-- BWA (version >= 0.7.17)  
-- circos (v0.67. only required if drawing indel map))  
-
+- SAMTools  
+- minimap2 and patools utility
+- seqkit 
+- EMBOSS package seqret command
 
 Install Anaconda3 or Miniconda3. Then,  
 ```
