@@ -33,13 +33,6 @@ git clone git@github.com:kazumaxneo/pseudo_complete_genome_builder.git
 cd pseudo_complete_genome_builder/
 conda env create -f=env.yml
 conda activate pseudo_complete_genome_builder_v0.6
-```
-    
-
-## Source
-```
-git clone git@github.com:kazumaxneo/pseudo_complete_genome_builder.git
-cd pseudo_complete_genome_builder/
 perl pseudo_complete_genome_builder_v0.6.pl
 ```
     
@@ -50,7 +43,7 @@ perl pseudo_complete_genome_builder_v0.6.pl
 perl pseudo_complete_genome_builder_v0.6.pl -f reference.fasta -s scaffolds.fasta -max 50 -min 40 -n 1 -p 3000 -l 3000 -t 150 -a spades
 ```
 
-##If you uses unicycler assembler for de novo assembly, type
+## create pseundo complete genome. If you uses unicycler assembler for de novo assembly, type
 ```
 perl pseudo_complete_genome_builder_v0.6.pl -f reference.fasta -s assembly.fasta -max 1.1 -min 0.9 -n 1 -p 3000 -l 3000 -t 150 -a unicycler
 ```
