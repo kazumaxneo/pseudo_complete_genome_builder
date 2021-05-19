@@ -31,7 +31,7 @@ Install Anaconda3 or Miniconda3. Then,
 ```
 git clone git@github.com:kazumaxneo/pseudo_complete_genome_builder.git
 cd pseudo_complete_genome_builder/
-conda env create -f=env.yml
+conda env create -f=env.yaml
 conda activate pseudo_complete_genome_builder_v0.6
 perl pseudo_complete_genome_builder_v0.6.pl
 ```
