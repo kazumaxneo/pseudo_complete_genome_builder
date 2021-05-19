@@ -63,7 +63,8 @@ Input/output options:
 
 ## Test run
 ```
-
+cd test/
+perl ../pseudo_complete_genome_builder_v0.6.pl -f reference.fa -s contigs.fasta -max 30 -min 15 -n c1 -p 3000 -l 3000 -t 150 -a spades
 ```  
 
 First, pseudo complete genome was created, then thier pairwise seuqence alignment was performed with minimap2. Finally, their sequence difference, including SNVs, small indels, and large indels, was called with paftools.
